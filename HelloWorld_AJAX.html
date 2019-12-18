@@ -1,0 +1,22 @@
+<html leng="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo-AJAX</title>
+</head>
+
+<body>
+    <h2>Ejemplo con AJAX</h2>
+    <script>
+        connection = new XMLHttpRequest();
+        connection.onreadystatechange = function() {
+            if (this.readyState == 4) { //El 4 indica operación finalizada.
+                alert(this.responseText);
+            }
+        }
+        connection.open("GET", "HelloWorld.txt");
+        connection.send(null);
+    </script>
+</body>
+
+</html>
